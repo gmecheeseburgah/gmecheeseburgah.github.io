@@ -161,7 +161,7 @@ class Note3D {
 function preload() {
   instructions = loadImage('notes/instr.png');
   testPic = loadImage("icons/cracked-ground-1.jpeg");
-  testTxt = loadImage('yuri note.png');
+  testTxt = loadImage('uniCollabYr3_v0.png');
 
   joeyPic = loadImage("icons/cracked-ground-1.jpeg");
 
