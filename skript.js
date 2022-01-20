@@ -19,7 +19,7 @@ var D = {
   cz:0,
   x:0,
   y:74,
-  z:180,
+  z:175,
   r:0,
   r2:0,
 };
@@ -32,7 +32,7 @@ var ang = function(a){
 }
 
 
-//no of ppl = 15
+//no of ppl = 16
 
 let txtKuba, picKuba;
 let txtSharifa, picSharifa;
@@ -49,6 +49,7 @@ let txtDan, picDan;
 let txtLewis, picLewis;
 let txtMax, picMax;
 let txtJoey, picJoey;
+let txtPeter, picPeter;
 
 
 function setup() {
@@ -56,37 +57,55 @@ function setup() {
   cam = createCamera();
   
   //wall left
-  picSharifa = new Icon3D(20, -105, -249, 1.5708);
+  picSharifa = new Icon3D(20, -125, -249, 1.5708);
+  txtSharifa = new Note3D(100, -80, -249, 1.5708);
   
-  picKamil = new Icon3D(220, -105, -249, 1.5708);
+  picKamil = new Icon3D(220, -125, -249, 1.5708);
+  txtKamil = new Note3D(300, -80, -249, 1.5708);
   
-  picAlex = new Icon3D(420, -105, -249, 1.5708);
+  picAlex = new Icon3D(420, -125, -249, 1.5708);
+  txtAlex = new Note3D(500, -80, -249, 1.5708);
   
-  picYuri = new Icon3D(620, -105, -249, 1.5708);
-  txtYuri = new Note3D(685, -80, -249, 1.5708);
+  picYuri = new Icon3D(620, -125, -249, 1.5708);
+  txtYuri = new Note3D(700, -80, -249, 1.5708);
   
-  picKuba = new Icon3D(820, -105, -249, 1.5708);
-  txtKuba = new Note3D(885, -80, -249, 1.5708);
+  picKuba = new Icon3D(820, -125, -249, 1.5708);
+  txtKuba = new Note3D(900, -80, -249, 1.5708);
   
-  picKevin = new Icon3D(1020, -105, -249, 1.5708);
+  picKevin = new Icon3D(1020, -125, -249, 1.5708);
+  txtKevin = new Note3D(1100, -80, -249, 1.5708);
+
+  picPeter = new Icon3D(1220, -125, -249, 1.5708);
+  txtPeter = new Note3D(1300, -80, -249, 1.5708);
   
   //wall front
-  picBen = new Icon3D(-200, -105, -1249, 0);
-  txtBen = new Note3D(-135, -80, -1249, 0);
+  picBen = new Icon3D(-150, -125, -1499, 0);
+  txtBen = new Note3D(-70, -80, -1499, 0);
   
-  picViraj = new Icon3D(-50, -105, -1249, 0);
-  txtViraj = new Note3D(15, -80, -1249, 0);
-  
-  picHani = new Icon3D(100, -105, -1249, 0);
-  txtHani = new Note3D(165, -105, -1249, 0);
+  picViraj = new Icon3D(50, -125, -1499, 0);
+  txtViraj = new Note3D(130, -80, -1499, 0);
   
   //wall right
-  picCally = new Icon3D(-1070, -105, -249, -1.5708);
-  picRosie = new Icon3D(-870, -105, -249, -1.5708);
-  picDan = new Icon3D(-670, -105, -249, -1.5708);
-  picLewis = new Icon3D(-470, -105, -249, -1.5708);
-  picMax = new Icon3D(-270, -105, -249, -1.5708);
-  picJoey = new Icon3D(-70, -105, -249, -1.5708);
+  picHani = new Icon3D(-1270, -125, -249, -1.5708);
+  txtHani = new Note3D(-1190, -80, -249, -1.5708);
+  
+  picCally = new Icon3D(-1070, -125, -249, -1.5708);
+  txtCally = new Note3D(-990, -80, -249, -1.5708);
+
+  picRosie = new Icon3D(-870, -125, -249, -1.5708);
+  txtRosie = new Note3D(-790, -80, -249, -1.5708);
+
+  picDan = new Icon3D(-670, -125, -249, -1.5708);
+  txtDan = new Note3D(-590, -80, -249, -1.5708);
+
+  picLewis = new Icon3D(-470, -125, -249, -1.5708);
+  txtLewis = new Note3D(-390, -80, -249, -1.5708);
+
+  picMax = new Icon3D(-270, -125, -249, -1.5708);
+  txtMax = new Note3D(-190, -80, -249, -1.5708);
+
+  picJoey = new Icon3D(-70, -125, -249, -1.5708);
+  txtJoey = new Note3D(10, -80, -249, -1.5708);
 }
 
 class Icon2D {
@@ -117,7 +136,7 @@ class Icon3D {
     rotateY(this.r);
     translate(this.x, this.y, this.z);
     //texture(this.t);
-    rect(0, 0, 50, 50);
+    rect(0, 0, 75, 75);
     pop();
   }
 }
@@ -134,22 +153,55 @@ class Note3D {
     push();
     rotateY(this.r);
     translate(this.x, this.y, this.z);
-    rect(0, 0, 20, 25);
+    rect(0, 0, 24, 30);
     pop();
   }
 }
 
 function preload() {
-  joeyPic = loadImage("cracked-ground-1.jpeg");
-  testPic = loadImage("cracked-ground-1.jpeg");
+  instructions = loadImage('notes/instr.png');
+  testPic = loadImage("icons/cracked-ground-1.jpeg");
   testTxt = loadImage('yuri note.png');
-  yuriTxt = loadImage('yuri note.png');
-  yuriPic = loadImage('500x500px Icon.png');
-  kubaPic = loadImage('uniCollabYr3_v0.png');
+
+  joeyPic = loadImage("icons/cracked-ground-1.jpeg");
+
+  yuriPic = loadImage('icons/500x500px Icon.png');
+  yuriTxt = loadImage('notes/Yuri.png');
+  
+  kubaPic = loadImage('icons/uniCollabYr3_v0.png');
+
+  alexPic = loadImage('icons/alex.png');
+  alexTxt = loadImage('notes/Alex.png');
+
+  benPic = loadImage('icons/Ben_image.jpeg');
+
+  callyPic = loadImage('icons/Cally.gif');
+  callyTxt = loadImage('notes/Cally.png');
+
+  haniPic = loadImage('icons/Hani.jpg');
+  haniTxt = loadImage('notes/Hani.png');
+
+  kamilPic = loadImage('icons/Kamil.jpeg');
+  kevinPic = loadImage('icons/Kevin_Image.jpg');
+
+  maxPic = loadImage('icons/Max_image.png');
+  maxTxt = loadImage('notes/Max.png');
+
+  peterPic = loadImage('icons/Peter Lai.JPG');
+  peterTxt = loadImage('notes/Peter.png');
+
+  rosiePic = loadImage('icons/rosy image.png');
+
+  //NO PICS YET:
+  lewisPic
+  sharifaPic
+  virajPic
+  danPic
 }
 
 function draw() {
-  background(102, 255, 204);
+  //background(102, 255, 204);
+  background(16, 16, 96);
   //debugMode();
   //orbitControl();
   
@@ -250,28 +302,36 @@ function draw() {
     }
   }
   
+  //GROUND
+  push();
+  rotateX(1.5708);
+  fill(0, 100, 0);
+  translate(0, 0, -1);
+  rect(-2000, 3000, 4000, -8000);
+  pop();
+
   //floor
   push();
   //noStroke();
   rotateX(1.5708);
   fill(255, 220, 193);
-  rect(-250, 250, 500, -1500);
+  rect(-250, 250, 500, -1750);
   pop();
   
   //longer wallz
   push();
   rotateY(1.5708);
   translate(0, 0, 250);
-  rect(-250, 0, 1000, -250);
+  rect(-250, 0, 1750, -250);
   translate(0, 0, -500);
-  rect(-250, 0, 1000, -250);
+  rect(-250, 0, 1750, -250);
   pop();
   
   //shorter wallz
   push();
-  translate(0, 0, -1250);
+  translate(0, 0, -1500);
   rect(-250, 0, 500, -250);
-  translate(0, 0, 1500);
+  translate(0, 0, 1750);
   rect(-250, 0, 500, -250);
   pop();
   
@@ -282,10 +342,11 @@ function draw() {
   rect(-250, 250, 500, -1000);
   pop();
   
+  // !!! MOVE A BIT INTO THE ROOM !!! /done
   //computa
   push();
   fill(50);
-  translate(0, -75, 90);
+  translate(0, -75, 80);
   box(80, 50, 5);
   fill(102, 255, 204);
   translate(-38, -23, 3);
@@ -295,48 +356,100 @@ function draw() {
   
   //wall behind computa
   push();
-  translate(-38, -100, 87);
+  translate(-38, -100, 77);
   rect(-60, -50, 200, 150);
+  push();
   //fill pic, note
+  texture(instructions);
   translate(0, 0, 1);
   rect(95, 25, 15, 20);
   pop();
+  pop();
   
+
+  // v-DISPLAYS-v
   push();
+  //Kuba
   texture(kubaPic);
   picKuba.display();
-  //texture
+  //texture();
   txtKuba.display();
   
-  texture(testPic);
+  //Kamil
+  texture(kamilPic);
   picKamil.display();
+
+  txtKamil.display();
+  //Sharifa
+
   picSharifa.display();
+
+  txtSharifa.display();
+  //Alex
+  texture(alexPic);
   picAlex.display();
-  
-  //texture(testPic);
+  texture(alexTxt);
+  txtAlex.display();
+  //Hani
+  texture(haniPic);
   picHani.display();
-  //texture(testTxt);
-  //txtHani.display();
-  
+  texture(haniTxt);
+  txtHani.display();
+  //Yuri
   texture(yuriPic);
   picYuri.display();
   texture(yuriTxt);
   txtYuri.display();
-  
-  texture(testPic);
+  //Cally
+  texture(callyPic);
   picCally.display();
+  texture(callyTxt);
+  txtCally.display();
+  //Kevin
+  texture(kevinPic);
   picKevin.display();
-  
+
+  txtKevin.display();
+  //Ben
+  texture(benPic);
   picBen.display();
+
   txtBen.display();
-  
+  //Rosie
+  texture(rosiePic);
   picRosie.display();
+
+  txtRosie.display();
+  //Dan
+
   picDan.display();
+
+  txtDan.display();
+  //Lewis
+
   picLewis.display();
+
+  txtLewis.display();
+  //Max
+  texture(maxPic);
   picMax.display();
+  texture(maxTxt);
+  txtMax.display();
+  //Joey
+  texture(joeyPic);
   picJoey.display();
+
+  txtJoey.display();
+  //Viraj
+
   picViraj.display();
+
   txtViraj.display();
+  //Peter
+  texture(peterPic);
+  picPeter.display();
+  texture(peterTxt);
+  txtPeter.display();
   
   pop();
 }
