@@ -244,19 +244,19 @@ function draw() {
   }
   
   // v JUMP FUNC v
-  if (keys[32]) {
-    for (let ijump = 0; ijump <= 75; ijump++) {
-      D.y = D.y + 0.1;
-    }
-  //  if (D.y > 47) {
-  //    D.y = D.y - 7.5;
+  //if (keys[32]) {
+  //  for (let ijump = 0; ijump <= 75; ijump++) {
+  //    D.y = D.y + 0.1;
   //  }
-  }
-  if (keys[17]) {
-    for (let idescend = 0; idescend <= 75; idescend++) {
-      D.y = D.y - 0.1;
-    }
-  }
+  ////  if (D.y > 47) {
+  ////    D.y = D.y - 7.5;
+  ////  }
+  //}
+  //if (keys[17]) {
+  //  for (let idescend = 0; idescend <= 75; idescend++) {
+  //    D.y = D.y - 0.1;
+  //  }
+  //}
         
   if(mx > 0){
     mx--;
