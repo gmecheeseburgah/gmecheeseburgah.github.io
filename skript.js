@@ -160,6 +160,7 @@ class Note3D {
 
 function preload() {
   instructions = loadImage('notes/instr.png');
+  emptySpace = loadImage('notes/empty.png');
   testPic = loadImage("icons/cracked-ground-1.jpeg");
   testTxt = loadImage('uniCollabYr3_v0.png');
 
@@ -169,6 +170,7 @@ function preload() {
   yuriTxt = loadImage('notes/Yuri.png');
   
   kubaPic = loadImage('icons/uniCollabYr3_v0.png');
+  kubaTxt = loadImage('notes/Kuba.png');
 
   alexPic = loadImage('icons/alex.png');
   alexTxt = loadImage('notes/Alex.png');
@@ -182,7 +184,9 @@ function preload() {
   haniTxt = loadImage('notes/Hani.png');
 
   kamilPic = loadImage('icons/Kamil.jpeg');
+  
   kevinPic = loadImage('icons/Kevin_Image.jpg');
+  kevinTxt = loadImage('notes/Kevin.png');
 
   maxPic = loadImage('icons/Max_image.png');
   maxTxt = loadImage('notes/Max.png');
@@ -191,12 +195,25 @@ function preload() {
   peterTxt = loadImage('notes/Peter.png');
 
   rosiePic = loadImage('icons/rosy image.png');
-
+  rosieTxt = loadImage('notes/Rosie.png');
+	
+  lewisPic = loadImage('icons/lewisImg.jpeg');
+	
+  //virajPic = loadImage('icons/Viraj_Image');
+  virajTxt = loadImage('notes/Viraj.png');
+	
   //NO PICS YET:
-  lewisPic
   sharifaPic
-  virajPic
   danPic
+  virajPic
+  //NO NOTES YET:
+  kamilTxt
+  lewisTxt
+  danTxt
+  sharifaTxt
+  
+  joeyTxt
+  benTxt
 }
 
 function draw() {
