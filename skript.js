@@ -389,7 +389,7 @@ function draw() {
   //Kuba
   texture(kubaPic);
   picKuba.display();
-  //texture();
+  texture(kubaTxt);
   txtKuba.display();
   
   //Kamil
@@ -398,7 +398,7 @@ function draw() {
 
   txtKamil.display();
   //Sharifa
-
+  texture(emptySpace);
   picSharifa.display();
 
   txtSharifa.display();
@@ -425,7 +425,7 @@ function draw() {
   //Kevin
   texture(kevinPic);
   picKevin.display();
-
+  texture(kevinTxt);
   txtKevin.display();
   //Ben
   texture(benPic);
@@ -435,15 +435,15 @@ function draw() {
   //Rosie
   texture(rosiePic);
   picRosie.display();
-
+  texture(rosieTxt);
   txtRosie.display();
   //Dan
-
+  texture(emptySpace);
   picDan.display();
 
   txtDan.display();
   //Lewis
-
+  texture(lewisPic);
   picLewis.display();
 
   txtLewis.display();
@@ -460,7 +460,7 @@ function draw() {
   //Viraj
 
   picViraj.display();
-
+  texture(virajTxt);
   txtViraj.display();
   //Peter
   texture(peterPic);
