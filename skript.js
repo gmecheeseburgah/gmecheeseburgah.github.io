@@ -153,7 +153,7 @@ class Note3D {
     push();
     rotateY(this.r);
     translate(this.x, this.y, this.z);
-    rect(0, 0, 24, 30);
+    rect(0, 0, 36, 45);
     pop();
   }
 }
