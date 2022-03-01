@@ -204,7 +204,7 @@ function preload() {
 	
   lewisPic = loadImage('icons/lewisImg.jpeg');
 	
-  virajPic = loadImage('icons/Viraj_Image');
+  virajPic = loadImage('icons/Viraj_Image.jpg');
   virajTxt = loadImage('notes/Viraj.png');
 	
   //NO PICS YET:
