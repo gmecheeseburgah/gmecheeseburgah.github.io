@@ -163,8 +163,12 @@ function preload() {
   emptySpace = loadImage('notes/empty.png');
   testPic = loadImage("icons/cracked-ground-1.jpeg");
   testTxt = loadImage('uniCollabYr3_v0.png');
+  
+  sharifaPic = loadImage('icons/Asharifa image.jpg');
+  sharifaTxt = loadImage('notes/Sharifa.png');
 
   joeyPic = loadImage("icons/cracked-ground-1.jpeg");
+  joeyTxt = loadImage('notes/Joey.png');
 
   yuriPic = loadImage('icons/500x500px Icon.png');
   yuriTxt = loadImage('notes/Yuri.png');
@@ -176,6 +180,7 @@ function preload() {
   alexTxt = loadImage('notes/Alex.png');
 
   benPic = loadImage('icons/Ben_image.jpeg');
+  benTxt = loadImage('notes/Ben.png');
 
   callyPic = loadImage('icons/Cally.gif');
   callyTxt = loadImage('notes/Cally.png');
@@ -199,21 +204,17 @@ function preload() {
 	
   lewisPic = loadImage('icons/lewisImg.jpeg');
 	
-  //virajPic = loadImage('icons/Viraj_Image');
+  virajPic = loadImage('icons/Viraj_Image');
   virajTxt = loadImage('notes/Viraj.png');
 	
   //NO PICS YET:
-  sharifaPic
   danPic
+  
   virajPic
   //NO NOTES YET:
   kamilTxt
   lewisTxt
   danTxt
-  sharifaTxt
-  
-  joeyTxt
-  benTxt
 }
 
 function draw() {
@@ -395,12 +396,12 @@ function draw() {
   //Kamil
   texture(kamilPic);
   picKamil.display();
-
+  texture(emptySpace);
   txtKamil.display();
   //Sharifa
-  texture(emptySpace);
+  texture(sharifaPic);
   picSharifa.display();
-
+  texture(sharifaTxt);
   txtSharifa.display();
   //Alex
   texture(alexPic);
@@ -430,7 +431,7 @@ function draw() {
   //Ben
   texture(benPic);
   picBen.display();
-
+  texture(benTxt);
   txtBen.display();
   //Rosie
   texture(rosiePic);
@@ -445,7 +446,7 @@ function draw() {
   //Lewis
   texture(lewisPic);
   picLewis.display();
-
+  texture(emptySpace);
   txtLewis.display();
   //Max
   texture(maxPic);
@@ -455,10 +456,10 @@ function draw() {
   //Joey
   texture(joeyPic);
   picJoey.display();
-
+  texture(joeyTxt);
   txtJoey.display();
   //Viraj
-
+  texture(virajPic);
   picViraj.display();
   texture(virajTxt);
   txtViraj.display();
