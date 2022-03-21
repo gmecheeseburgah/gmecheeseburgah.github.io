@@ -161,6 +161,7 @@ class Note3D {
 function preload() {
   instructions = loadImage('notes/instr.png');
   emptySpace = loadImage('notes/empty.png');
+  screen = loadImage('SCREENss.png');
   testPic = loadImage("icons/cracked-ground-1.jpeg");
   testTxt = loadImage('uniCollabYr3_v0.png');
   
@@ -368,7 +369,7 @@ function draw() {
   box(80, 50, 5);
   fill(102, 255, 204);
   translate(-38, -23, 3);
-  //texture(testPic);
+  texture(screen);
   rect(0, 0, 76, 46);
   pop();
   
