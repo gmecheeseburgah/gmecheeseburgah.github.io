@@ -161,7 +161,7 @@ class Note3D {
 function preload() {
   instructions = loadImage('notes/instr.png');
   emptySpace = loadImage('notes/empty.png');
-  screen = loadImage('SCREENss.png');
+  screen = loadImage('SCREENssForComputah.png');
   testPic = loadImage("icons/cracked-ground-1.jpeg");
   testTxt = loadImage('uniCollabYr3_v0.png');
   
